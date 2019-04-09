@@ -2,12 +2,13 @@ import * as fromNumbers from './numbers.reducer';
 
 import * as fromActions from '../actions/numbers.actions';
 import { NumbersModel } from '../models/numbers.model';
+import {IncreaseValueOne} from "../actions/numbers.actions";
 
 describe('NumbersReducer Default', () => {
   describe('undefined action', () => {
     it('should return the default state', () => {
       const { initialState } = fromNumbers;
-      const action = {};
+      const action = {} as IncreaseValueOne;
       const state: NumbersModel = fromNumbers.reducer(undefined, action);
 
       expect(state).toBe(initialState);

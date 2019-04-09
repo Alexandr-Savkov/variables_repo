@@ -1,7 +1,7 @@
 import { NumbersModel } from './../models/numbers.model';
 import * as TutorialActions from '../actions/numbers.actions';
 
-const initialState: NumbersModel = {
+export const initialState: NumbersModel = {
   value_one: -5,
   value_two: 10
 };
