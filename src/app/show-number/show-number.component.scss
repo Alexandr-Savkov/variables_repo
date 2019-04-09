@@ -1,0 +1,13 @@
+.show-number {
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px;
+  &.show-number.error-border {
+    border: 2px solid red;
+  }
+  &.show-number.success-border {
+    border: 2px solid green;
+  }
+}
+

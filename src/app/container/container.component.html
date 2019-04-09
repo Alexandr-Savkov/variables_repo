@@ -1,0 +1,12 @@
+<div class="app_container">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-light" (click)="start()">Start</button>
+    <button type="button" class="btn btn-light" (click)="reset()">Reset</button>
+    <button type="button" class="btn btn-light" (click)="stop()">Stop</button>
+  </div>
+
+  <div class="numbers_holder">
+    <app-show-number [number]="(numbers | async).value_one"></app-show-number>
+    <app-show-number [number]="(numbers | async).value_two"></app-show-number>
+  </div>
+</div>

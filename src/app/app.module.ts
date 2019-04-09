@@ -5,10 +5,14 @@ import { StoreModule } from '@ngrx/store';
 import { reducer } from './reducers/numbers.reducer';
 
 import { AppComponent } from './app.component';
+import { ContainerComponent } from './container/container.component';
+import { ShowNumberComponent } from './show-number/show-number.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContainerComponent,
+    ShowNumberComponent
   ],
   imports: [
     BrowserModule,

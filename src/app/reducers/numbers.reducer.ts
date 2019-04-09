@@ -16,9 +16,13 @@ export function reducer(state: NumbersModel = initialState, action: TutorialActi
       return {...state, value_two: state.value_two - 1};
 
     case TutorialActions.CHANGE_VALUES:
-      state = reducer(state, new TutorialActions.IncreaseValueOne(null));
-      state = reducer(state, new TutorialActions.DecreaseValueTwo(null));
-      return reducer(state, new TutorialActions.DecreaseValueTwo(null));
+      if (action.payload && action.payload.reset) {
+        return {...initialState}
+      } else {
+        state = reducer(state, new TutorialActions.IncreaseValueOne(null));
+        state = reducer(state, new TutorialActions.DecreaseValueTwo(null));
+        return reducer(state, new TutorialActions.DecreaseValueTwo(null));
+      }
     default:
       return state;
   }
